@@ -492,4 +492,3 @@ def load_resistance_ohm(voltage_v: float, power_mw: float) -> float:
     if power_mw <= 0.0:
         raise ValueError("target load power must be positive.")
     return voltage_v**2 / (power_mw / 1000.0)
-

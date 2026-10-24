@@ -232,4 +232,3 @@ def build_model_context(
         temperature_c=float(temperature_c),
         rho_t_ohm_m=rho_at_temperature(float(temperature_c)),
     )
-

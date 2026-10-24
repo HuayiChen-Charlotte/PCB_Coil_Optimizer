@@ -665,4 +665,3 @@ def run(config: dict[str, Any]) -> dict[str, Any]:
         rejected_rows,
         summary,
     )
-

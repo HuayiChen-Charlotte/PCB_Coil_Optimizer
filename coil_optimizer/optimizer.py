@@ -1231,4 +1231,3 @@ def verify_candidates(rows_loaded: list[dict[str, Any]], rows_eta: list[dict[str
         ),
         "spot_checks": spot,
     }
-

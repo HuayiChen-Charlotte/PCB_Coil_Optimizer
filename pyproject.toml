@@ -38,4 +38,3 @@ include = ["coil_optimizer*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-
