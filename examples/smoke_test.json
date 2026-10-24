@@ -1,0 +1,82 @@
+{
+  "case_name": "smoke_test",
+  "output_dir": "outputs/smoke_test",
+  "frequency_MHz": 6.78,
+  "layers": 2,
+  "rx_Dout_mm": {
+    "values": [8.0, 10.0]
+  },
+  "tx_Dout_mm": {
+    "values": [14.0, 16.0, 18.0]
+  },
+  "distance_mm": 5.0,
+  "rx_load": {
+    "voltage_V": 1.8,
+    "power_mW": 50.0
+  },
+  "rx_N": {
+    "min": 2,
+    "max": 4,
+    "step": 1
+  },
+  "tx_N": {
+    "min": 4,
+    "max": 6,
+    "step": 1
+  },
+  "tx_trace_width_mm": {
+    "values": [0.4, 0.6]
+  },
+  "tx_spacing_mm": {
+    "values": [0.15, 0.2]
+  },
+  "rx_trace_width_mm": {
+    "values": [0.3, 0.4]
+  },
+  "rx_spacing_mm": {
+    "values": [0.15, 0.2]
+  },
+  "layer_spacing_mm": 0.6,
+  "copper_thickness_um": 34.7,
+  "temperature_C": 25.0,
+  "constraints": {
+    "trace_width_min_mm": 0.1,
+    "spacing_min_mm": 0.1,
+    "fill_factor_min": 0.0,
+    "C_sensor_min_pF": 0.0,
+    "C_sensor_max_pF": 10000.0,
+    "minimum_SRF_ratio": 2.0,
+    "k_min": 0.0,
+    "k_max": 1.0,
+    "norm_Dcoil_percent_min": null,
+    "norm_Dcoil_percent_max": null
+  },
+  "search": {
+    "mode": "grid_refine",
+    "coarse_stride": 2,
+    "coarse_top_pairs": 10,
+    "refine_top_pairs": 10,
+    "local_radius": 1,
+    "local_refine_rounds": 1,
+    "pair_pruning": {
+      "enabled": false,
+      "max_pair_rows_per_context": 10000,
+      "loaded_fraction": 0.5
+    },
+    "local_fine_expansion": {
+      "enabled": false
+    },
+    "max_candidate_rows": 1000,
+    "show_progress": true,
+    "progress_interval_seconds": 1.0
+  },
+  "output": {
+    "candidate_rows": 20,
+    "stage_tables": {
+      "enabled": false
+    },
+    "write_per_scenario": false,
+    "write_rejected": false
+  }
+}
+

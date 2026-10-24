@@ -1,0 +1,118 @@
+{
+  "case_name": "full_search",
+  "output_dir": "outputs/full_search",
+  "frequency_MHz": 6.78,
+  "layers": 2,
+  "rx_Dout_mm": {
+    "min": 5.0,
+    "max": 20.0,
+    "step": 0.5
+  },
+  "tx_Dout_mm": {
+    "min": 5.0,
+    "max": 40.0,
+    "step": 0.5
+  },
+  "distance_mm": {
+    "min": 5.0,
+    "max": 10.0,
+    "step": 1.0
+  },
+  "rx_load": {
+    "voltage_V": 1.8,
+    "power_mW": {
+      "min": 20.0,
+      "max": 80.0,
+      "step": 10.0
+    }
+  },
+  "rx_N": {
+    "min": 1,
+    "max": 35,
+    "step": 1
+  },
+  "tx_N": {
+    "min": 1,
+    "max": 70,
+    "step": 1
+  },
+  "tx_trace_width_mm": {
+    "min": 0.1016,
+    "max": 0.254,
+    "step": 0.0254
+  },
+  "tx_spacing_mm": {
+    "min": 0.1016,
+    "max": 0.254,
+    "step": 0.0254
+  },
+  "rx_trace_width_mm": {
+    "min": 0.1016,
+    "max": 0.254,
+    "step": 0.0254
+  },
+  "rx_spacing_mm": {
+    "min": 0.1016,
+    "max": 0.254,
+    "step": 0.0254
+  },
+  "layer_spacing_mm": 0.6,
+  "copper_thickness_um": 34.7,
+  "temperature_C": 25.0,
+  "constraints": {
+    "trace_width_min_mm": 0.1016,
+    "spacing_min_mm": 0.1016,
+    "fill_factor_min": 0.3,
+    "C_sensor_min_pF": 10.0,
+    "C_sensor_max_pF": 10000.0,
+    "minimum_SRF_ratio": 4.0,
+    "k_min": 0.0,
+    "k_max": 1.0,
+    "norm_Dcoil_percent_min": 40.0,
+    "norm_Dcoil_percent_max": 50.0
+  },
+  "search": {
+    "mode": "grid_refine",
+    "exhaustive_pair_distance_limit": 250000,
+    "coarse_stride": 6,
+    "coarse_top_pairs": 30,
+    "refine_top_pairs": 30,
+    "local_radius": 1,
+    "local_refine_rounds": 1,
+    "pair_pruning": {
+      "enabled": true,
+      "max_pair_rows_per_context": 200000,
+      "loaded_fraction": 0.7
+    },
+    "local_fine_expansion": {
+      "enabled": true,
+      "seed_top_eta_pairs": 10,
+      "seed_top_loaded_pairs": 15,
+      "N_radius": 1,
+      "Dout_radius_mm": 0.5,
+      "Dout_step_mm": 0.5,
+      "trace_width_radius_mm": 0.0254,
+      "trace_width_step_mm": 0.0254,
+      "spacing_radius_mm": 0.0254,
+      "spacing_step_mm": 0.0254,
+      "distance_radius_mm": 1.0,
+      "distance_step_mm": 0.5
+    },
+    "max_candidate_rows": 100000,
+    "show_progress": true,
+    "progress_interval_seconds": 5.0
+  },
+  "output": {
+    "candidate_rows": 200,
+    "stage_tables": {
+      "enabled": true,
+      "pre_local_profile": "fine",
+      "post_local_profile": "fine"
+    },
+    "write_per_scenario": true,
+    "per_scenario_rows": null,
+    "write_rejected": false,
+    "rejected_rows": 0
+  }
+}
+

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcb-coil-optimizer"
+version = "0.1.0"
+description = "Analytical screening and optimization for coaxial circular PCB coil pairs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  {name = "Huayi Chen"},
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+]
+
+[project.scripts]
+pcb-coil-opt = "coil_optimizer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/HuayiChen-Charlotte/PCB_Coil_Optimizer"
+Repository = "https://github.com/HuayiChen-Charlotte/PCB_Coil_Optimizer"
+Issues = "https://github.com/HuayiChen-Charlotte/PCB_Coil_Optimizer/issues"
+
+[tool.setuptools.packages.find]
+include = ["coil_optimizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
